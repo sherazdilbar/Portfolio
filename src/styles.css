@@ -152,6 +152,9 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .font-display {
@@ -196,5 +199,20 @@
   }
   .animate-float-up { animation: float-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
   .animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
-  .animate-marquee { animation: marquee 30s linear infinite; }
+  .animate-marquee { 
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+
+  /* Mobile scroll optimization */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
 }

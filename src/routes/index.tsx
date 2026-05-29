@@ -93,9 +93,9 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
-      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40">
+      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
           <a href="#top" className="font-display text-xl tracking-tight">
             <span className="text-gradient-gold">SD.</span>
@@ -118,30 +118,30 @@ function Index() {
       </nav>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-center pt-24 pb-12 noise">
+      <section id="top" className="relative min-h-screen flex items-center pt-20 pb-8 md:pt-24 md:pb-12 noise">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
             style={{ background: "var(--gradient-gold)" }} />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 blur-3xl bg-primary" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 items-center w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
           <div className="lg:col-span-7 animate-float-up">
-            <div className="flex items-center gap-3 mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <div className="flex items-center gap-3 mb-6 md:mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
               <span className="w-8 h-px bg-primary animate-shimmer" />
               Available for opportunities
             </div>
-            <h1 className="font-display text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-tight">
+            <h1 className="font-display text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight">
               Sheraz
               <br />
               <span className="italic text-gradient-gold">Dilbar</span>
             </h1>
-            <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
               Computer Scientist with <span className="text-foreground">3+ years</span> shipping reliable, scalable, production-ready software — across backend services, web applications, cloud, and AI.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-6">
+            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-4 md:gap-6">
               <a href="#work"
-                className="group inline-flex items-center gap-3 px-7 py-4 bg-primary text-primary-foreground hover:shadow-[var(--shadow-gold)] transition-all text-sm uppercase tracking-[0.2em]">
+                className="group inline-flex items-center gap-3 px-6 md:px-7 py-3 md:py-4 bg-primary text-primary-foreground hover:shadow-[var(--shadow-gold)] transition-all text-sm uppercase tracking-[0.2em]">
                 View Work
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
@@ -150,23 +150,23 @@ function Index() {
               </a>
             </div>
 
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
+            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 max-w-md">
               <div>
-                <div className="font-display text-4xl text-gradient-gold">3+</div>
+                <div className="font-display text-3xl md:text-4xl text-gradient-gold">3+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Years</div>
               </div>
               <div>
-                <div className="font-display text-4xl text-gradient-gold">15+</div>
+                <div className="font-display text-3xl md:text-4xl text-gradient-gold">15+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Projects</div>
               </div>
               <div>
-                <div className="font-display text-4xl text-gradient-gold">4</div>
+                <div className="font-display text-3xl md:text-4xl text-gradient-gold">4</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Languages</div>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative mt-8 lg:mt-0">
             <div className="relative aspect-[4/5] overflow-hidden border border-primary/20"
               style={{ boxShadow: "var(--shadow-elegant)" }}>
               <img
@@ -182,8 +182,8 @@ function Index() {
       </section>
 
       {/* MARQUEE */}
-      <div className="border-y border-border py-6 overflow-hidden">
-        <div className="flex items-center gap-12 whitespace-nowrap font-display text-3xl md:text-5xl italic animate-marquee" style={{ paddingRight: '2rem' }}>
+      <div className="border-y border-border py-4 md:py-6 overflow-hidden">
+        <div className="flex items-center gap-8 md:gap-12 whitespace-nowrap font-display text-2xl md:text-3xl lg:text-5xl italic animate-marquee" style={{ paddingRight: '2rem' }}>
           {[..."Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · ".split("·")].map((w, i) => (
             <span key={i} className={i % 2 === 0 ? "text-foreground" : "text-gradient-gold"}>{w.trim()}</span>
           ))}
@@ -459,7 +459,8 @@ function Index() {
       {showScrollTop && (
         <a 
           href="#top" 
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-primary text-primary-foreground rounded-full shadow-[var(--shadow-gold)] hover:scale-110 transition-all animate-float-up"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-primary text-primary-foreground rounded-full shadow-[var(--shadow-gold)] hover:scale-110 transition-all animate-float-up will-change-transform"
+          aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
