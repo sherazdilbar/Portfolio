@@ -127,20 +127,21 @@ function Index() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full relative z-10">
-          <div className="lg:col-span-7 animate-float-up">
-            <div className="flex items-center gap-3 mb-6 md:mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <div className="lg:col-span-7 animate-float-up text-center lg:text-left">
+            <div className="flex items-center gap-3 mb-6 md:mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground justify-center lg:justify-start">
               <span className="w-8 h-px bg-primary animate-shimmer" />
               Available for opportunities
             </div>
             <h1 className="font-display text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight">
-              Sheraz
-              <br />
+              <span className="block sm:inline">Sheraz</span>
+              <span className="hidden sm:inline"> </span>
+              <br className="sm:hidden" />
               <span className="italic text-gradient-gold">Dilbar</span>
             </h1>
-            <p className="mt-6 md:mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground leading-relaxed">
               Computer Scientist with <span className="text-foreground">3+ years</span> shipping reliable, scalable, production-ready software — across backend services, web applications, cloud, and AI.
             </p>
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-4 md:gap-6">
+            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-4 md:gap-6 justify-center lg:justify-start">
               <a href="#work"
                 className="group inline-flex items-center gap-3 px-6 md:px-7 py-3 md:py-4 bg-primary text-primary-foreground hover:shadow-[var(--shadow-gold)] transition-all text-sm uppercase tracking-[0.2em]">
                 View Work
@@ -151,7 +152,7 @@ function Index() {
               </a>
             </div>
 
-            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 max-w-md">
+            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 max-w-md mx-auto lg:mx-0">
               <div>
                 <div className="font-display text-3xl md:text-4xl text-gradient-gold">3+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Years</div>
