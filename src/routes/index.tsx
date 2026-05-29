@@ -97,8 +97,9 @@ function Index() {
       {/* NAV */}
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
-          <a href="#top" className="font-display text-xl tracking-tight">
-            <span className="text-gradient-gold">SD&lt;/&gt;</span>
+          <a href="#top" className="font-display text-xl tracking-tight flex items-center gap-1">
+            <span className="text-gradient-gold">SD</span>
+            <span className="text-gradient-gold">&lt;/&gt;</span>
           </a>
           <div className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <a href="#work" className="hover:text-primary transition-colors">Work</a>
