@@ -133,10 +133,7 @@ function Index() {
               Available for opportunities
             </div>
             <h1 className="font-display text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight">
-              <span className="block sm:inline">Sheraz</span>
-              <span className="hidden sm:inline"> </span>
-              <br className="sm:hidden" />
-              <span className="italic text-gradient-gold">Dilbar</span>
+              Sheraz <span className="italic text-gradient-gold">Dilbar</span>
             </h1>
             <p className="mt-6 md:mt-8 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground leading-relaxed">
               Computer Scientist with <span className="text-foreground">3+ years</span> shipping reliable, scalable, production-ready software — across backend services, web applications, cloud, and AI.
