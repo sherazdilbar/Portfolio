@@ -98,7 +98,7 @@ function Index() {
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
           <a href="#top" className="font-display text-xl tracking-tight">
-            <span className="text-gradient-gold">SD</></></span>
+            <span className="text-gradient-gold">SD&lt;/&gt;</span>
           </a>
           <div className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <a href="#work" className="hover:text-primary transition-colors">Work</a>
@@ -156,8 +156,8 @@ function Index() {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Years</div>
               </div>
               <div>
-                <div className="font-display text-3xl md:text-4xl text-gradient-gold">15+</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Projects</div>
+                <div className="font-display text-3xl md:text-4xl text-gradient-gold">5+</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">Tech Stacks</div>
               </div>
               <div>
                 <div className="font-display text-3xl md:text-4xl text-gradient-gold">4</div>
@@ -443,7 +443,7 @@ function Index() {
           >
             sherazdilbardev@gmail.com
           </a>
-          <div className="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm text-muted-foreground">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
             <a href="https://linkedin.com/in/sheraz-dilbar-dev/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors uppercase tracking-[0.2em] text-xs">LinkedIn</a>
             <span className="w-1 h-1 rounded-full bg-border" />
             <a href="https://github.com/sherazdilbar" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors uppercase tracking-[0.2em] text-xs">GitHub</a>
@@ -468,8 +468,8 @@ function Index() {
         </a>
       )}
 
-      <footer className="py-8 md:py-10 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+      <footer className="py-10 border-t border-border">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <div>© 2026 Sheraz Dilbar</div>
           <a 
             href="https://www.linkedin.com/in/sheraz-dilbar-dev/" 
