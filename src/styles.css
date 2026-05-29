@@ -148,8 +148,8 @@
   }
 
   html {
-    overflow-x: hidden;
     width: 100%;
+    max-width: 100vw;
   }
 
   body {
@@ -157,10 +157,9 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
-    overflow-x: hidden;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     width: 100%;
+    max-width: 100vw;
     position: relative;
   }
 

@@ -93,7 +93,7 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground w-full overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground w-full max-w-[100vw]">
       {/* NAV */}
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
@@ -118,7 +118,7 @@ function Index() {
       </nav>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-center pt-20 pb-8 md:pt-24 md:pb-12 noise">
+      <section id="top" className="relative min-h-screen flex items-center pt-20 pb-8 md:pt-24 md:pb-12 noise overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
             style={{ background: "var(--gradient-gold)" }} />
@@ -182,7 +182,7 @@ function Index() {
       </section>
 
       {/* MARQUEE */}
-      <div className="border-y border-border py-4 md:py-6 overflow-hidden">
+      <div className="border-y border-border py-4 md:py-6 overflow-hidden w-full">
         <div className="flex items-center gap-8 md:gap-12 whitespace-nowrap font-display text-2xl md:text-3xl lg:text-5xl italic animate-marquee" style={{ paddingRight: '2rem' }}>
           {[..."Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · Backend · Web · AI · Cloud · Automation · Databases · ".split("·")].map((w, i) => (
             <span key={i} className={i % 2 === 0 ? "text-foreground" : "text-gradient-gold"}>{w.trim()}</span>
