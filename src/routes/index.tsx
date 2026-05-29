@@ -459,7 +459,7 @@ function Index() {
       {showScrollTop && (
         <a 
           href="#top" 
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-primary text-primary-foreground rounded-full shadow-[var(--shadow-gold)] hover:scale-110 transition-all animate-float-up will-change-transform"
+          className="hidden md:flex fixed bottom-8 right-8 z-50 w-12 h-12 items-center justify-center bg-primary text-primary-foreground rounded-full shadow-[var(--shadow-gold)] hover:scale-110 transition-all animate-float-up will-change-transform"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
