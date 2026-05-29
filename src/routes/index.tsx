@@ -93,12 +93,12 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground w-full max-w-[100vw]">
+    <div className="min-h-screen bg-background text-foreground w-full relative">
       {/* NAV */}
       <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/40 will-change-transform">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
           <a href="#top" className="font-display text-xl tracking-tight">
-            <span className="text-gradient-gold">SD.</span>
+            <span className="text-gradient-gold">SD</></></span>
           </a>
           <div className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <a href="#work" className="hover:text-primary transition-colors">Work</a>
@@ -120,12 +120,12 @@ function Index() {
       {/* HERO */}
       <section id="top" className="relative min-h-screen flex items-center pt-20 pb-8 md:pt-24 md:pb-12 noise overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
+          <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl pointer-events-none"
             style={{ background: "var(--gradient-gold)" }} />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 blur-3xl bg-primary" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 blur-3xl bg-primary pointer-events-none" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full relative z-10">
           <div className="lg:col-span-7 animate-float-up">
             <div className="flex items-center gap-3 mb-6 md:mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
               <span className="w-8 h-px bg-primary animate-shimmer" />
@@ -210,17 +210,17 @@ function Index() {
       </section>
 
       {/* TOOLKIT - CATEGORIZED */}
-      <section id="toolkit" className="py-32 bg-card/40 border-y border-border relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+      <section id="toolkit" className="py-16 md:py-24 lg:py-32 bg-card/40 border-y border-border relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5 blur-3xl"
             style={{ background: "var(--gradient-gold)" }} />
         </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-20">
-            <h2 className="font-display text-5xl md:text-7xl leading-none">Toolkit</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl leading-none">Toolkit</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Languages */}
             <div>
               <h3 className="text-lg font-medium text-primary mb-6 pb-3 border-b border-border text-center">
@@ -321,16 +321,16 @@ function Index() {
       </section>
 
       {/* WORK */}
-      <section id="work" className="py-32 bg-card/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-end justify-between mb-20">
+      <section id="work" className="py-16 md:py-24 lg:py-32 bg-card/40 border-y border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex items-end justify-between mb-12 md:mb-16 lg:mb-20">
             <div>
-              <h2 className="font-display text-5xl md:text-7xl leading-none">Projects</h2>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-7xl leading-none">Projects</h2>
             </div>
             <div className="hidden md:block text-sm text-muted-foreground italic">A glance at recent builds.</div>
           </div>
 
-          <div className="space-y-px bg-border">
+          <div className="space-y-px bg-border overflow-hidden">
             {projects.map((p) => (
               <article key={p.no} className="group bg-background hover:bg-card transition-colors p-8 md:p-12 grid md:grid-cols-12 gap-6 items-start cursor-pointer">
                 <div className="md:col-span-1 font-display text-3xl text-primary">{p.no}</div>
@@ -353,8 +353,8 @@ function Index() {
       </section>
 
       {/* EDUCATION */}
-      <section id="education" className="py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-16">
+      <section id="education" className="py-16 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-display text-5xl md:text-6xl leading-none">Education</h2>
           </div>
@@ -370,8 +370,8 @@ function Index() {
       </section>
 
       {/* PROFESSIONAL EXPERIENCE */}
-      <section id="experience" className="py-32 bg-card/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-16">
+      <section id="experience" className="py-16 md:py-24 lg:py-32 bg-card/40 border-y border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-display text-5xl md:text-6xl leading-none">Professional Experience</h2>
           </div>
@@ -399,8 +399,8 @@ function Index() {
       </section>
 
       {/* CERTIFICATIONS */}
-      <section id="certifications" className="py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-16">
+      <section id="certifications" className="py-16 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-display text-5xl md:text-6xl leading-none">Certifications</h2>
           </div>
@@ -426,24 +426,24 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-32 relative noise border-t border-border">
-        <div className="absolute inset-0 -z-10">
+      <section id="contact" className="py-16 md:py-24 lg:py-32 relative noise border-t border-border overflow-hidden">
+        <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10 blur-3xl"
             style={{ background: "var(--gradient-gold)" }} />
         </div>
-        <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="font-display text-6xl md:text-9xl leading-none">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+          <h2 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-9xl leading-none">
             Let's <span className="italic text-gradient-gold">build</span>
             <br />
             something.
           </h2>
           <a
             href="mailto:sherazdilbardev@gmail.com"
-            className="inline-block mt-12 font-display text-2xl md:text-4xl italic border-b border-primary/40 hover:border-primary pb-2 transition-colors"
+            className="inline-block mt-8 md:mt-12 font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl italic border-b border-primary/40 hover:border-primary pb-2 transition-colors break-all"
           >
             sherazdilbardev@gmail.com
           </a>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
+          <div className="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm text-muted-foreground">
             <a href="https://linkedin.com/in/sheraz-dilbar-dev/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors uppercase tracking-[0.2em] text-xs">LinkedIn</a>
             <span className="w-1 h-1 rounded-full bg-border" />
             <a href="https://github.com/sherazdilbar" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors uppercase tracking-[0.2em] text-xs">GitHub</a>
@@ -468,8 +468,8 @@ function Index() {
         </a>
       )}
 
-      <footer className="py-10 border-t border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+      <footer className="py-8 md:py-10 border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <div>© 2026 Sheraz Dilbar</div>
           <a 
             href="https://www.linkedin.com/in/sheraz-dilbar-dev/" 
