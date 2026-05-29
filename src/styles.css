@@ -147,6 +147,11 @@
     border-color: var(--color-border);
   }
 
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -155,6 +160,8 @@
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
+    position: relative;
   }
 
   .font-display {
